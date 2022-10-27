@@ -201,7 +201,7 @@ public class M3u8DownloadFactory {
          */
         private void mergeTs() {
             try {
-                File file = new File(dir + FILESEPARATOR + fileName + ".mp4");
+                File file = new File(dir + FILESEPARATOR + fileName + "_" + System.currentTimeMillis() + ".mp4");
                 System.gc();
                 if (file.exists())
                     file.delete();

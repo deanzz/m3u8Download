@@ -62,7 +62,15 @@ public class M3u8Main {
                 System.out.println("下载完毕");
             }
         });
-        //开始下载
-        m3u8Download.start();
+        while(true) {
+            //开始下载
+            m3u8Download.start();
+            try {
+                Thread.sleep(10000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        }
     }
+    
 }
